@@ -1,25 +1,24 @@
-# include <stdio.h>
-#include <string.h>
-            //while loop = continues a block of code if the condition is true if false it stop 
+#include <stdio.h>
+#include <stdbool.h>
+
 int main(){
+    bool isRunning = true;
+    char response = '\0';
 
- char name [50] ="";
+    while(isRunning){
+        printf("You are playing a game\n");
+        printf("Would you like to continue to play (Y = YES, N = NO): ");
+        scanf(" %c", &response);
+        
+        if(response == 'N'){
+            isRunning = false;
+            printf("You exited the game\n");
+            
 
- getchar;
- printf("Enter your name: ");
- fgets(name, sizeof(name), stdin);
- name[strlen(name) - 1] = '\0';
+        }
+       
 
- while(strlen(name)==0){
-    printf("Your name is not available. Enter your name please: ");
-     fgets(name, sizeof(name), stdin);
-    name[strlen(name) - 1] = '\0';
-
- }
-
- printf("Welcome %s, thank you for choosing us", name);
-
-
-
-    return 0 ;
+    }
+   
+    return 0;
 }
